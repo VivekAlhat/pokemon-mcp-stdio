@@ -1,0 +1,13 @@
+[project]
+name = "pokemon-mcp"
+version = "0.1.0"
+description = "Trying out MCP with Pokemon API"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "groq>=0.31.1",
+    "mcp>=1.13.1",
+    "nest-asyncio>=1.6.0",
+    "python-dotenv>=1.1.1",
+    "requests>=2.32.5",
+]
