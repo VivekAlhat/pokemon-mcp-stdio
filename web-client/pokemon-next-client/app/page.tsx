@@ -32,7 +32,7 @@ interface GroqResponse {
 export default function ChatWithPokemon() {
   const { state, tools, callTool, error, retry } = useMcp({
     url: process.env.NEXT_PUBLIC_MCP_SERVER!,
-    clientName: "nextjs-pokebot",
+    clientName: "nextjs-pokemon-bot",
     transportType: "http",
     autoReconnect: true,
   });
@@ -361,11 +361,11 @@ export default function ChatWithPokemon() {
                         <span className="text-white text-sm">🤖</span>
                       </div>
                       <div className="flex-1 bg-gray-50 rounded-2xl rounded-tl-sm px-4 py-3">
-                        <p className="text-gray-900 whitespace-pre-wrap">
+                        <div className="text-gray-900 whitespace-pre-wrap">
                           <Markdown remarkPlugins={[remarkGfm]}>
                             {message.content}
                           </Markdown>
-                        </p>
+                        </div>
                       </div>
                     </>
                   )}
